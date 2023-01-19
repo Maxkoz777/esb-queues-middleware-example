@@ -1,4 +1,5 @@
 spring:
+
   kafka:
     consumer:
       group-id: tpd-loggers
@@ -11,3 +12,4 @@ queue:
   kafka:
     entry-queue-name: kafka-entry-queue
     final-queue-name: kafka-final-queue
+    audit-queue-name: audit-queue-name
