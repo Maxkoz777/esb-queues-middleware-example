@@ -7,5 +7,6 @@ import org.springframework.boot.context.properties.ConstructorBinding;
 @ConfigurationProperties(prefix = "queue.kafka")
 public record KafkaConfigurationProperties(
     String entryQueueName,
-    String finalQueueName
+    String finalQueueName,
+    String auditQueueName
 ) {}
