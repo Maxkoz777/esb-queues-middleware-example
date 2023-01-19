@@ -63,6 +63,11 @@ public class KafkaConfig {
         return new NewTopic(configurationProperties.finalQueueName(), 3, (short) 1);
     }
 
+    @Bean
+    public NewTopic auditKafkaTopic() {
+        return new NewTopic(configurationProperties.auditQueueName(), 3, (short) 1);
+    }
+
 
     @Bean
     public ConsumerFactory<String, Object> consumerFactory() {
