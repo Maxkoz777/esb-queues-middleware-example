@@ -8,8 +8,17 @@ spring:
     # Kafka cluster or your Docker IP is different
     bootstrap-servers: localhost:9092
 
+camel:
+  component:
+    servlet:
+      mapping:
+        context-path: /camel/*
+
 queue:
   kafka:
     entry-queue-name: kafka-entry-queue
     final-queue-name: kafka-final-queue
     audit-queue-name: audit-queue-name
+
+timer:
+  period: 5000
